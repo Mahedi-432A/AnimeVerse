@@ -20,7 +20,7 @@ A high-performance, visually stunning anime discovery web application built with
 - 🚀 Advanced Search with Debouncing
 - ♾️ Infinite Scroll Grid
 - 🎭 Shared Element Transitions
-- ⚡ Rate-Limited API Calls (Prevents 429 Errors)
+- ⚡ Rate-Limited API Calls
 
 ## 🛠️ Getting Started
 
@@ -58,8 +58,8 @@ src/
 ## 🔥 API Rate Limiting
 
 This project implements intelligent rate limiting for the Jikan API:
-- 350ms delay between requests
-- Automatic retry on 429 errors
+- 400ms delay between requests
+- Automatic retry on errors
 - Request/response interceptors
 
 ## 📝 License
