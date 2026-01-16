@@ -15,15 +15,15 @@ import Skeleton from '@/components/ui/Skeleton';
 export default function AnimeDetailPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = use(params);
   const animeId = parseInt(id);
-
-  if (isNaN(animeId)) {
-    return notFound();
-  }
-
+  
   const { data, isLoading, isError } = useQuery({
     queryKey: ['anime', animeId],
     queryFn: () => getAnimeById(animeId),
   });
+
+  if (isNaN(animeId)) {
+    return notFound();
+  }
 
   if (isError) {
     return notFound();
